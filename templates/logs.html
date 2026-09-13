@@ -1,0 +1,1 @@
+{% extends 'base.html' %}{% block content %}<section class='card'><table><tr><th>Data</th><th>Dispositivo</th><th>Tipo</th><th>Estado</th><th>Mensagem</th></tr>{% for x in logs %}<tr><td>{{ x.created_at }}</td><td>{{ x.device_id or 'Sistema' }}</td><td>{{ x.kind }}</td><td>{{ x.status }}</td><td>{{ x.message }}</td></tr>{% endfor %}</table></section>{% endblock %}
